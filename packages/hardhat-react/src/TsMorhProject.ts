@@ -95,8 +95,8 @@ export class TsMorphProject {
 
   private async getContractContexts() {
     let currentNetwork = this.hre.network.name;
-    // currentNetwork =
-    //   currentNetwork === "hardhat" ? "localhost" : currentNetwork;
+    currentNetwork =
+      currentNetwork === "hardhat" ? "localhost" : currentNetwork;
     log("Mapping deployments from " + currentNetwork + " to React context");
 
     const typechainFactoriesPath = path.resolve(
